@@ -8,6 +8,7 @@ import { MaterialModule } from './material.module';
 
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AccountService } from './account.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FormsModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
