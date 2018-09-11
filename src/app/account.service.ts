@@ -23,7 +23,7 @@ export class AccountService {
 
 
   addAccount(newAcct){
-    return this.http.post(`${environment.api_url}thought`, newAcct);
+    return this.http.post(`${environment.api_url}addAccount`, newAcct);
   }
 
 }
