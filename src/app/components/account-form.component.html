@@ -1,3 +1,26 @@
 <p>
   account-form works!
 </p>
+<!-- <div class="border" fxLayout="row" fxLayoutAlign="space-around">
+  <div class="border">Full Name</div>
+  <div class="border">User Name</div>
+</div> -->
+
+<div class="example-container">
+  <form #newAcctForm="ngForm" (ngSubmit)=newAcct()>
+    <mat-form-field>
+      <input matInput placeholder="Full Name" name="fullname" ngModel>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Select" name="country" ngModel> 
+        <mat-option value="singapore">Singapore</mat-option>
+        <mat-option value="malaysia">Malaysia</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- <button type="submit" mat-button mat-raised-button color="accent" [disabled]="taskForm.invalid"> -->
+      <button type="submit" mat-button mat-raised-button color="accent">Submit
+      </button>
+  </form>
+</div>
