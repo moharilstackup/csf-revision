@@ -1,17 +1,23 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import {IAccount} from './account';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AccountService {
 
-  constructor() { }
+  private _url: string = "/assets/data/accounts.json";
 
-  getAccts() {
-    return [
-      {"fullname":"John Denver","username":"jdenver"},
-      {"fullname":"Jessica Drud","username":"jsdrud"}
-    ];
+  constructor(private http: HttpClient) { }
+
+  getAccts(): Observable<IAccount[]> {
+    return this.http.get<IAccount[]>(this._url);
+    // return [
+    //   {"fullname":"John Denver","username":"jdenver"},
+    //   {"fullname":"Jessica Drud","username":"jsdrud"}
+    // ];
   }
 
 
