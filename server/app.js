@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 console.log(__dirname + "/../dist/csf-revision");
 app.use(express.static(__dirname + "/../dist/csf-revision"))
 
-app.post("/thought", (req,res)=>{
+app.post("/addAccount", (req,res)=>{
     console.log(req.body);
     res.json(req.body);
 })
